@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prodotti Negozio Online</title>
     <!-- Ricordarsi di inserire il link al CSS -->
-
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Inserire qui il contenuto della pagina -->
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>imgine</th>
+                    <th>Nome</th>
+                    <th> prezzp</th>
+                    <th>disponibilità</th>
+                </tr>
+            </thead>
+            <tbody id="tabellaProdotto"></tbody>
+        </table>
+    </div>
+
+    <div id="modale" class="modal nascosto">
+        <div class="modal-content">
+            <h2 id="prodottoNome"></h2>
+            <img id="prodottoImmagine" src="" alt="">
+            <p id="prodottoDescrizione"></p>
+            <p id="prodottoDescrizione"></p>
+            <p id="prodottoDisponibilita"></p>
+            <span id="chiudi"class></span>
+        </div>
+    </div>
 
     <!-- Ricordarsi di inserire il link al JS -->
+    <script src="script.js"></script>
 
 </body>
+
 </html>
