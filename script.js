@@ -1,6 +1,6 @@
 /**
  * Progetto finale JS - Prodotti Negozio Online
- * Crea una pagina che mostra una lista di prodotti recuperati da un'API (es. http://localhost:5000/api/products)
+ * Crea una pagina che mostra una lista di prodotti recuperati da un'API (es. http://192.168.1.102:5000/api/products)
  * Ogni prodotto ha: id, nome, descrizione, categoria, prezzo, immagine, disponibilità
  * 
  * FUNZIONALITÀ:
@@ -22,5 +22,30 @@
  * Nota: i filtri devono lavorare insieme e sui dati già recuperati, senza fare nuove richieste all'API
  */
 
+const URL = "http://192.168.1.102:5000/api/products";
+const tabella = document.querySelector("#tabellaProdotto")
+
+async function prendiProdotti() {
+    const ris = await fetch(URL);
+    const prodotti = await ris.json();
+    console.log(prodotti);
+    
+    prodotti.forEach(prod => {
+        const prodottoSingolo =  `
+        <tr>
+            <td><img src="${prod.immagine}" alt=""></td>
+            <td>${prod.nome}</td>
+            <td>€2499.99</td>
+            <td>disponibile</td>
+            
+        </tr>
+        `;
+
+        tabella.innerHTML += prodottoSingolo;
+    });
+}
+
+
+prendiProdotti()
 
 
