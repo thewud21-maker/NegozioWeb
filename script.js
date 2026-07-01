@@ -40,12 +40,17 @@ async function prendiProdotti() {
             
         </tr>
         `;
+     tabella.innerHTML += prodottoSingolo;
+       
 
-        tabella.innerHTML += prodottoSingolo;
+
+
     });
 }
-
+    
+ 
 
 prendiProdotti()
+
 
 
